@@ -1,7 +1,7 @@
 const blogs = [
     {
         name: 'Stored Procedure',
-        description: 'An article store procedure, It explains how stored procedure works.',
+        description: 'An article about stored procedure, It explains how stored procedure works.',
         link: 'https://ragavendravignesh.medium.com/stored-procedure-4c595df63908',
         image: '/images/stdproc.jpg'
     },

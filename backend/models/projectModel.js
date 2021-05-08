@@ -1,6 +1,6 @@
 import mongoose from 'mongoose'
 
-const projectSchema = mongooose.Schema({
+const projectSchema = mongoose.Schema({
     name: {
         type: String,
         required: true
