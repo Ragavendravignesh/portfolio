@@ -3,6 +3,8 @@ import dotenv from 'dotenv'
 import connectDB from './config/db.js'
 import morgan from 'morgan'
 
+import { errorHandler, notFound } from './middleware/errorMiddleware.js'
+
 dotenv.config()
 
 connectDB()
@@ -14,6 +16,9 @@ app.use(express.json())
 if(process.env.NODE_ENV === 'development') {
     app.use(morgan('dev'))
 }
+
+app.use(notFound)
+app.use(errorHandler)
 
 const PORT = process.env.PORT || 5000
 
