@@ -5,6 +5,7 @@ import morgan from 'morgan'
 
 import projectRoutes from './routes/projectRoutes.js'
 import blogRoutes from './routes/blogRoutes.js'
+import emailRoutes from './routes/emailRoutes.js'
 
 import { errorHandler, notFound } from './middleware/errorMiddleware.js'
 
@@ -22,6 +23,7 @@ if(process.env.NODE_ENV === 'development') {
 
 app.use('/api/projects', projectRoutes);
 app.use('/api/blogs', blogRoutes);
+app.use('/api/mail', emailRoutes);
 
 app.use(notFound)
 app.use(errorHandler)
