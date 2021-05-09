@@ -16,7 +16,7 @@ const projectSchema = mongoose.Schema({
     image: {
         type: String,
         required: true,
-        default: 'no-image.jpg'
+        default: 'no-image.png'
     },
     githubLink: {
         type: String,

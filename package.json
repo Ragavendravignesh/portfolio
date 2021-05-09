@@ -1,5 +1,6 @@
 {
   "name": "portfolio",
+  "proxy": "http://127.0.0.1:5000",
   "version": "1.0.0",
   "description": "Portfolio project",
   "main": "server.js",
