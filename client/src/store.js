@@ -3,9 +3,11 @@ import thunk from 'redux-thunk'
 import { composeWithDevTools } from 'redux-devtools-extension'
 
 import { projectDetailsReducer } from './reducers/projectReducer'
+import { blogDetailsReducer } from './reducers/blogReducer'
 
 const reducers = combineReducers({
   projectDetails: projectDetailsReducer,
+  blogDetails: blogDetailsReducer,
 })
 
 const initialState = {}
