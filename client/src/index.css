@@ -1,3 +1,11 @@
 main {
   min-height: 80vh;
 }
+
+.cardtext {
+  font-size: 18px;
+}
+
+.borders {
+  border-radius: 50%;
+}
