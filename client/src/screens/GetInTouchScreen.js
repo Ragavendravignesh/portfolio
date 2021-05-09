@@ -1,13 +1,36 @@
 import React, { useState, useEffect } from 'react'
 import FormContainer from '../components/FormContainer'
-import { Form, Row, Col } from 'react-bootstrap'
+import { Form, Button } from 'react-bootstrap'
+import { sendEmail } from '../actions/emailActions'
+import { SEND_EMAIL_RESET } from '../constants/emailConstants'
+import { useDispatch, useSelector } from 'react-redux'
+import Loader from '../components/Loader'
+import Message from '../components/Message'
 
 const GetInTouchScreen = () => {
+  const dispatch = useDispatch()
+
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
 
-  
-  return (
+  const emailSend = useSelector((state) => state.emailSend)
+  const { loading, success, error } = emailSend
+
+  useEffect(() => {
+    if (success) {
+      setEmail('')
+      setMessage('')
+      dispatch({ type: SEND_EMAIL_RESET })
+    }
+  }, [dispatch, success])
+
+  const SubmitHandler = () => {
+    dispatch(sendEmail({ email, message }))
+  }
+
+  return loading ? (
+    <Loader />
+  ) : (
     <FormContainer>
       <Form onSubmit={SubmitHandler}>
         <Form.Group controlId='email'>
@@ -32,6 +55,8 @@ const GetInTouchScreen = () => {
           Send
         </Button>
       </Form>
+      {success && <Message variant='success'>Mail sent!</Message>}
+      {error && <Message variant='danger'>{error}</Message>}
     </FormContainer>
   )
 }

@@ -6,6 +6,7 @@ import Footer from './components/Footer'
 import HomeScreen from './screens/HomeScreen'
 import ProjectScreen from './screens/ProjectScreen'
 import BlogScreen from './screens/BlogScreen'
+import GetInTouchScreen from './screens/GetInTouchScreen'
 
 const App = () => {
   return (
@@ -13,9 +14,10 @@ const App = () => {
       <Header />
       <main className='py-3'>
         <Container>
-          <Route exact path='/' component={HomeScreen} /> 
+          <Route exact path='/' component={HomeScreen} />
           <Route path='/projects' component={ProjectScreen} />
-          <Route path='/blogs' component={BlogScreen}/>         
+          <Route path='/blogs' component={BlogScreen} />
+          <Route path='/getintouch' component={GetInTouchScreen} />
         </Container>
       </main>
       <Footer />

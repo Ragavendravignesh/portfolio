@@ -4,10 +4,12 @@ import { composeWithDevTools } from 'redux-devtools-extension'
 
 import { projectDetailsReducer } from './reducers/projectReducer'
 import { blogDetailsReducer } from './reducers/blogReducer'
+import { emailSendReducer } from './reducers/emailReducer'
 
 const reducers = combineReducers({
   projectDetails: projectDetailsReducer,
   blogDetails: blogDetailsReducer,
+  emailSend: emailSendReducer,
 })
 
 const initialState = {}
