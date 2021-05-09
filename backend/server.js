@@ -3,6 +3,8 @@ import dotenv from 'dotenv'
 import connectDB from './config/db.js'
 import morgan from 'morgan'
 
+import projectRoutes from './routes/projectRoutes.js'
+
 import { errorHandler, notFound } from './middleware/errorMiddleware.js'
 
 dotenv.config()
@@ -16,6 +18,8 @@ app.use(express.json())
 if(process.env.NODE_ENV === 'development') {
     app.use(morgan('dev'))
 }
+
+app.use('/api/projects', projectRoutes);
 
 app.use(notFound)
 app.use(errorHandler)

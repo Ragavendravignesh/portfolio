@@ -10,14 +10,14 @@ const projects = [
         name:'Bookaholic',
         description: ' This one is a nodejs back end api, which helps all the bookaholics out there to pick a favourite book they want',
         techStack: 'Nodejs,Express,Mongodb',
-        image: '/image/no-image.jpg',
+        image: '/images/no-image.jpg',
         githubLink: 'https://github.com/Ragavendravignesh/bookaholic'
     },
     {
         name:'Proshop',
         description: 'Ecommerce application, yes you heard it right. This one is an ecommerce application. Don\'t get surprised, I created this by following an Udemy course. Anyway it is absolutely worth,feel free to hit the demo.',
         techStack: 'Mongodb, Express, Nodejs and React',
-        image: '/image/no-image.jpg',
+        image: '/images/no-image.jpg',
         githubLink: 'https://github.com/Ragavendravignesh/ProShop',
         demoLink: 'https://proshopragav.herokuapp.com/'
     }
