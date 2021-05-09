@@ -9,3 +9,7 @@ main {
 .borders {
   border-radius: 50%;
 }
+
+strong{
+  font-weight: bold;
+}
