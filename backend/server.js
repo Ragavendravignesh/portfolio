@@ -4,6 +4,7 @@ import connectDB from './config/db.js'
 import morgan from 'morgan'
 
 import projectRoutes from './routes/projectRoutes.js'
+import blogRoutes from './routes/blogRoutes.js'
 
 import { errorHandler, notFound } from './middleware/errorMiddleware.js'
 
@@ -20,6 +21,7 @@ if(process.env.NODE_ENV === 'development') {
 }
 
 app.use('/api/projects', projectRoutes);
+app.use('/api/blogs', blogRoutes);
 
 app.use(notFound)
 app.use(errorHandler)
