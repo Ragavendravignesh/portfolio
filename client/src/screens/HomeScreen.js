@@ -1,5 +1,6 @@
 import React from 'react'
 import { Card, Row, Col, ResponsiveEmbed } from 'react-bootstrap'
+import './HomeScreen.css';
 
 const HomeScreen = () => {
   return (
@@ -36,7 +37,7 @@ const HomeScreen = () => {
                 </Col>
               </Row>
             </Col>
-            <Col>
+            <Col className="showImage">
               <ResponsiveEmbed aspectRatio='1by1'>
                 <Card.Img
                   src='./images/mypic.jpg'
